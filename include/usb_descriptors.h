@@ -213,22 +213,6 @@ static struct __attribute__((packed)) {
 			.bFrameIntervalType		= 2,
 			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
 		},
-		/*(struct UVC_FRAME_UNCOMPRESSED(2)){
-			.bLength			= UVC_DT_FRAME_UNCOMPRESSED_SIZE(2),
-			.bDescriptorType		= USB_DT_CS_INTERFACE,
-			.bDescriptorSubType		= UVC_VS_FRAME_UNCOMPRESSED,
-			.bFrameIndex			= 7,
-			.bmCapabilities			= 0,
-			.wWidth				= 1920,
-			.wHeight			= 1080,
-			.dwMinBitRate			= FRAME_BITRATE(1920, 1080, 12, FPS_TO_INTERVAL(30)),
-			.dwMaxBitRate			= FRAME_BITRATE(1920, 1080, 12, FPS_TO_INTERVAL(60)),
-			.dwMaxVideoFrameBufferSize	= VIDEO_FRAME_SIZE_NV12(1920, 1080),
-			.dwDefaultFrameInterval		= FPS_TO_INTERVAL(60),
-			.bFrameIntervalType		= 2,
-			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
-		},
-	},*/
 	.format_uncompressed_nv12_color_matching = {
 		.bLength			= sizeof(video_streaming_descriptors.format_uncompressed_nv12_color_matching),
 		.bDescriptorType		= USB_DT_CS_INTERFACE,
