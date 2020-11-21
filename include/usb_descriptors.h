@@ -112,7 +112,7 @@ static struct __attribute__((packed)) {
 		.bDescriptorType		= USB_DT_CS_INTERFACE,
 		.bDescriptorSubType		= UVC_VS_FORMAT_UNCOMPRESSED,
 		.bFormatIndex			= FORMAT_INDEX_UNCOMPRESSED_NV12,
-		.bNumFrameDescriptors		= 6,
+		.bNumFrameDescriptors		= 5,
 		.guidFormat			= UVC_GUID_FORMAT_NV12,
 		.bBitsPerPixel			= 12,
 		.bDefaultFrameIndex		= 1,
@@ -182,7 +182,6 @@ static struct __attribute__((packed)) {
 			.bFrameIntervalType		= 2,
 			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
 		},
-		/* My own changes, adds 720p60 - experiments only */
 		(struct UVC_FRAME_UNCOMPRESSED(2)){
 			.bLength			= UVC_DT_FRAME_UNCOMPRESSED_SIZE(2),
 			.bDescriptorType		= USB_DT_CS_INTERFACE,
@@ -197,22 +196,6 @@ static struct __attribute__((packed)) {
 			.dwDefaultFrameInterval		= FPS_TO_INTERVAL(60),
 			.bFrameIntervalType		= 2,
 			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(20)},
-		},
-		/* My own changes, adds 1080p60 - experiments only */
-		(struct UVC_FRAME_UNCOMPRESSED(2)){
-			.bLength			= UVC_DT_FRAME_UNCOMPRESSED_SIZE(2),
-			.bDescriptorType		= USB_DT_CS_INTERFACE,
-			.bDescriptorSubType		= UVC_VS_FRAME_UNCOMPRESSED,
-			.bFrameIndex			= 6,
-			.bmCapabilities			= 0,
-			.wWidth				= 1920,
-			.wHeight			= 1080,
-			.dwMinBitRate			= FRAME_BITRATE(1920, 1080, 12, FPS_TO_INTERVAL(30)),
-			.dwMaxBitRate			= FRAME_BITRATE(1920, 1080, 12, FPS_TO_INTERVAL(60)),
-			.dwMaxVideoFrameBufferSize	= VIDEO_FRAME_SIZE_NV12(1920, 1080),
-			.dwDefaultFrameInterval		= FPS_TO_INTERVAL(60),
-			.bFrameIntervalType		= 2,
-			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
 		},
 	},
 	.format_uncompressed_nv12_color_matching = {
