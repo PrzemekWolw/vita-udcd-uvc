@@ -112,7 +112,7 @@ static struct __attribute__((packed)) {
 		.bDescriptorType		= USB_DT_CS_INTERFACE,
 		.bDescriptorSubType		= UVC_VS_FORMAT_UNCOMPRESSED,
 		.bFormatIndex			= FORMAT_INDEX_UNCOMPRESSED_NV12,
-		.bNumFrameDescriptors		= 7,
+		.bNumFrameDescriptors		= 6,
 		.guidFormat			= UVC_GUID_FORMAT_NV12,
 		.bBitsPerPixel			= 12,
 		.bDefaultFrameIndex		= 1,
@@ -213,7 +213,7 @@ static struct __attribute__((packed)) {
 			.bFrameIntervalType		= 2,
 			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
 		},
-		(struct UVC_FRAME_UNCOMPRESSED(2)){
+		/*(struct UVC_FRAME_UNCOMPRESSED(2)){
 			.bLength			= UVC_DT_FRAME_UNCOMPRESSED_SIZE(2),
 			.bDescriptorType		= USB_DT_CS_INTERFACE,
 			.bDescriptorSubType		= UVC_VS_FRAME_UNCOMPRESSED,
@@ -228,7 +228,7 @@ static struct __attribute__((packed)) {
 			.bFrameIntervalType		= 2,
 			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
 		},
-	},
+	},*/
 	.format_uncompressed_nv12_color_matching = {
 		.bLength			= sizeof(video_streaming_descriptors.format_uncompressed_nv12_color_matching),
 		.bDescriptorType		= USB_DT_CS_INTERFACE,
