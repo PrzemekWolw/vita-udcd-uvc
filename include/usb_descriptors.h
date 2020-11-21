@@ -213,6 +213,7 @@ static struct __attribute__((packed)) {
 			.bFrameIntervalType		= 2,
 			.dwFrameInterval		= {FPS_TO_INTERVAL(60), FPS_TO_INTERVAL(30)},
 		},
+	},
 	.format_uncompressed_nv12_color_matching = {
 		.bLength			= sizeof(video_streaming_descriptors.format_uncompressed_nv12_color_matching),
 		.bDescriptorType		= USB_DT_CS_INTERFACE,
