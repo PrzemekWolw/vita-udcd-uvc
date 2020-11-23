@@ -20,7 +20,10 @@ controller directly performs a DMA transfer from the physical address of the res
 * 896x504 @ 30 FPS and (almost) 60 FPS
 * 864x488 @ 30 FPS and 60 FPS
 * 480x272 @ 30 FPS and 60 FPS
-* 1280x720 @ 30 FPS
+* 1280x720 @ 15-60 FPS
+* 1366x768 (glitched)
+* 1600x900 (console crash)
+* 1920x1080 (black screen)
 
 ## Download and installation
 
