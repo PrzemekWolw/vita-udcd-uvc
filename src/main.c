@@ -33,7 +33,7 @@
 #define UVC_DRIVER_NAME			"VITAUVC00"
 #define UVC_USB_PID			0x1337
 
-#define MAX_UVC_VIDEO_FRAME_SIZE	VIDEO_FRAME_SIZE_NV12(1280, 720)
+#define MAX_UVC_VIDEO_FRAME_SIZE	VIDEO_FRAME_SIZE_NV12(1920, 1080)
 
 #define UVC_PAYLOAD_HEADER_SIZE		12
 #define UVC_PAYLOAD_SIZE(frame_size)	(UVC_PAYLOAD_HEADER_SIZE + (frame_size))
@@ -977,7 +977,7 @@ int module_start(SceSize argc, const void *args)
 	console_init();
 #endif
 
-	LOG("udcd_uvc by xerpi\n");
+	LOG("udcd_uvc by xerpi modified by Car_Killer\n");
 
 	SceUdcd_modinfo.size = sizeof(SceUdcd_modinfo);
 	taiGetModuleInfoForKernel(KERNEL_PID, "SceUdcd", &SceUdcd_modinfo);
